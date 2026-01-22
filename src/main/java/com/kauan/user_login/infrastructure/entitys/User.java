@@ -1,3 +1,4 @@
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -5,18 +6,17 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "Usuário")
 @Entity
-
-
+@Table(name = "usuario")
 public class Usuario {
+
     @Id
-    @GenerateValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column (name = "email", unique = true)
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @Column (name = "nome")
+    @Column(name = "nome", nullable = false)
     private String nome;
 }

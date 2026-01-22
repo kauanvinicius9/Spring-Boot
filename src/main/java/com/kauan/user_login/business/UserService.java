@@ -1,5 +1,3 @@
-import com.kauan.user_login.business;
-
 import org.springframework.stereotype.Service;
 
 @Service 
@@ -16,6 +14,29 @@ public class UsuarioService {
 
     }
 
-    public Usuario buscarUsuarioPorEmail(String emai,l)
+    public Usuario buscarUsuarioPorEmail(String email) {
+        return repository.findByEmail(email).orElseThrow(
+            () -> new RuntimeException("E-mail não identificado")
+        );
+    }
 
+    public void deletarUsuarioPorEmail(String email) {
+        repository.deleteByEmail(email);
+    }
+
+    public void atualizarUsuarioPorId(Integer id, Usuario usuario) {
+    Usuario usuarioEntity = repository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Usuário não identificado"));
+
+    if (usuario.getEmail() != null) {
+        usuarioEntity.setEmail(usuario.getEmail());
+    }
+
+    if (usuario.getNome() != null) {
+        usuarioEntity.setNome(usuario.getNome());
+    }
+
+    repository.save(usuarioEntity);
+    
+    }
 }
