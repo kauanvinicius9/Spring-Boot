@@ -1,4 +1,4 @@
-package com.kauan.user_login;
+package com.crud.user_login.infrastructure;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

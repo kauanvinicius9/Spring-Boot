@@ -1,4 +1,4 @@
-package com.kauan.user_login;
+package com.crud.user_login;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
