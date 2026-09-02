@@ -1,6 +1,6 @@
 package com.crud.user_login.infrastructure.repository;
 
-import com.kauan.user_login.infrastructure.entitys.Usuario;
+import com.crud.user_login.infrastructure.entitys.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
