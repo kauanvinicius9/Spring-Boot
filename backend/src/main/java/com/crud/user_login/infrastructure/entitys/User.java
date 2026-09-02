@@ -1,3 +1,5 @@
+package com.crud.user_login.infrastructure.entitys;
+
 import jakarta.persistence.*;
 import lombok.*;
 
